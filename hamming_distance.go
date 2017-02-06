@@ -1,18 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
 
-func main() {
-	x, y := 4, 1
-	dis := hammingDistance(x, y)
-	fmt.Println(dis)
-}
-
-func hammingDistance(x int, y int) int {
+func HammingDistance(x int, y int) int {
 	xBinaryString, yBinaryString := strconv.FormatInt(int64(x), 2), strconv.FormatInt(int64(y), 2)
 	xBoolArray, yBoolArray := binaryString2BoolArray(xBinaryString), binaryString2BoolArray(yBinaryString)
 
