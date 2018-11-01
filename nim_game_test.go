@@ -11,7 +11,6 @@ func TestCanWinNim(t *testing.T) {
 		args args
 		want bool
 	}{
-		// TODO: Add test cases.
 		{
 			"test", args{4}, false,
 		},
