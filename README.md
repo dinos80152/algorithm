@@ -1,6 +1,6 @@
-# golang-leetcode
+# Algorithm
 
-LeetCode practices by golang
+Algorithm practices
 
 ## Resource
 
