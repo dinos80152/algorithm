@@ -1,6 +1,6 @@
-package main
+package string
 
-func strstr(a, b string) int {
+func Strstr(a, b string) int {
 	bLen := len(b)
 	for i := 0; i <= len(a)-bLen; i++ {
 		substr := a[i : i+bLen]

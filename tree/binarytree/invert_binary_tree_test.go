@@ -1,11 +1,11 @@
-package main
+package binarytree
 
 import (
 	"reflect"
 	"testing"
 )
 
-func Test_invertTree(t *testing.T) {
+func Test_InvertTree(t *testing.T) {
 	type args struct {
 		root *TreeNode
 	}
@@ -58,8 +58,8 @@ func Test_invertTree(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := invertTree(tt.args.root); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("invertTree() = %v, want %v", got, tt.want)
+			if got := InvertTree(tt.args.root); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("InvertTree() = %v, want %v", got, tt.want)
 			}
 		})
 	}

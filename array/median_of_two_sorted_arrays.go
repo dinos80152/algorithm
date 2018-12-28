@@ -1,6 +1,6 @@
-package main
+package array
 
-func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+func FindMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	numsL, numsS := nums1, nums2
 	if len(nums2) > len(nums1) {
 		numsL, numsS = nums2, nums1

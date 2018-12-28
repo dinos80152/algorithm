@@ -1,8 +1,8 @@
-package main
+package string
 
 import "bytes"
 
-func lengthOfLongestSubstring(s string) int {
+func LengthOfLongestSubstring(s string) int {
 	var subStr, topStr []byte
 	for i := 0; i < len(s); i++ {
 		char := s[i]
