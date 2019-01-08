@@ -1,4 +1,4 @@
-package recursive
+package math
 
 import "testing"
 
