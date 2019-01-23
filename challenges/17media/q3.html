@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+    <div class="task-description-content">
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+
+        <div id="brinza-task-description">
+            <p>You are given an implementation of a function:</p>
+            <blockquote>
+                <p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>function solution($A, $K);</tt></p>
+            </blockquote>
+            <p>This function, given a non-empty zero-indexed array A of N integers (sorted in non-decreasing order) and integer
+                K, checks whether A contains numbers 1, 2, ..., K (every number from 1 to K at least once) and no other numbers.</p>
+            <p>For example, given the following array A, and K = 3:</p>
+            <tt style="white-space:pre-wrap">  A[0] = 1
+  A[1] = 1
+  A[2] = 2
+  A[3] = 3
+  A[4] = 3</tt>
+            <p>The function should return <tt style="white-space:pre-wrap">true</tt>.</p>
+            <p>For the following array A, and K = 2:</p>
+            <tt style="white-space:pre-wrap">  A[0] = 1
+  A[1] = 1
+  A[2] = 3</tt>
+            <p>the function should return <tt style="white-space:pre-wrap">false</tt>.</p>
+            <p>Unfortunately, despite the fact that the function may return the expected result for the example input, there
+                is a bug (or bugs) in the implementation, which may produce incorrect results for other inputs. Find the
+                bug(s) and correct them. You should modify at most <b><b>two</b></b> lines of code.</p>
+            <p>Assume that:</p>
+            <blockquote>
+                <ul style="margin: 10px;padding: 0px;">
+                    <li>N and K are integers within the range [<span class="number">1</span>..<span class="number">300,000</span>];</li>
+                    <li>each element of array A is an integer within the range [<span class="number">0</span>..<span class="number">1,000,000,000</span>];</li>
+                    <li>array A is sorted in non-decreasing order.</li>
+                </ul>
+            </blockquote>
+            <p>Complexity:</p>
+            <blockquote>
+                <ul style="margin: 10px;padding: 0px;">
+                    <li>expected worst-case time complexity is O(N);</li>
+                    <li>expected worst-case space complexity is O(1), beyond input storage (not counting the storage required
+                        for input arguments).</li>
+                </ul>
+            </blockquote>
+            <p>Elements of input arrays can be modified.</p>
+        </div>
+        <div style="margin-top:5px">
+            <small>Copyright 2009–2017 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.</small>
+        </div>
+
+    </div>
+
+    <pre>
+<code>
+class Solution {
+    public boolean solution(int[] A, int K) {
+        int n = A.length;
+        for (int i = 0; i < n - 1; i++) {
+            if (A[i] + 1 < A[i + 1])
+                return false;
+        }
+        if (A[0] != 1 && A[n - 1] != K)
+            return false;
+        else
+            return true;
+    }
+}
+</code>
+</pre>
+
+    <pre>
+<code>
+function solution(A, K) {
+    var n = A.length;
+    for (var i = 0; i < n - 1; i++) {
+        if (A[i] + 1 < A[i + 1])
+            return false;
+    }
+    if (A[0] != 1 && A[n - 1] != K)
+        return false;
+    else
+        return true;
+}
+</code>
+</pre>
+
+    <pre>
+<code>
+function solution(&$A, $K) {
+    $i = 0;
+    $n = sizeof($A);
+    for($i = 0; $i < $n - 1; $i++)
+        if ($A[$i] + 1 < $A[$i + 1])
+            return False;
+    if ($A[0] != 1 AND $A[$n - 1] != $K)
+        return False;
+    else
+        return True;
+}
+</code>
+</pre>
+</body>
+
+</html>

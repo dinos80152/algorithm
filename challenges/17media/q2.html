@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+  <div class="task-description-content">
+    <div id="brinza-task-description">
+      <p>A zero-indexed array A consisting of N integers is given. A <i>segment</i> of this array is any pair of integers (P,
+        Q) such that 0 ≤ P &lt; Q &lt; N.</p>
+      <p>Segment (P, Q) of array A is called <i>monotonic</i> if the sequence consisting of numbers A[P], A[P+1], ..., A[Q]
+        is either strictly increasing, strictly decreasing or constant.</p>
+      <p>For example, in array A such that</p>
+      <tt style="white-space:pre-wrap">  A[0] = 1    A[1] = 2    A[2] = 4
+  A[3] = 7    A[4] = 6    A[5] = 6
+  A[6] = 6    A[7] = 2    A[8] = 0</tt>
+      <p>the segment (0,2) is monotonic because the sequence A[0], A[1], A[2] (equal to 1, 2, 4) is strictly increasing. Other
+        examples of monotonic segments in array A are (0, 3) and (4, 6). The segment (5,7) is not a monotonic segment because
+        the sequence A[5], A[6], A[7] (equal to 6, 6, 2) is neither strictly increasing or decreasing nor constant.</p>
+      <p>Write a function:</p>
+      <blockquote>
+        <p style="font-family: monospace; font-size: 9pt; display: block; white-space: pre-wrap"><tt>func Solution(A []int) int</tt></p>
+      </blockquote>
+      <p>that, given an array A consisting of N integers, returns the number of monotonic segments it contains.</p>
+      <p>The function should return −1 if this number exceeds 1,000,000,000.</p>
+      <p>Assume that:</p>
+      <blockquote>
+        <ul style="margin: 10px;padding: 0px;">
+          <li>N is an integer within the range [<span class="number">0</span>..<span class="number">1,000,000</span>];</li>
+          <li>each element of array A is an integer within the range [<span class="number">−1,000,000</span>..<span class="number">1,000,000</span>].</li>
+        </ul>
+      </blockquote>
+      <p>For example, given array A such that</p>
+      <tt style="white-space:pre-wrap">  A[0] = 1    A[1] = 2    A[2] = 4
+  A[3] = 7    A[4] = 6    A[5] = 6
+  A[6] = 6    A[7] = 2    A[8] = 0</tt>
+      <p>the function should return 13 because there are 13 monotonic segments in A, namely:</p>
+      <blockquote>
+        <ul style="margin: 10px;padding: 0px;">
+          <li>4 decreasing: (3, 4), (6, 7), (6, 8), (7, 8);</li>
+          <li>6 increasing: (0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3);</li>
+          <li>3 constant: (4, 5), (4, 6), (5, 6).</li>
+        </ul>
+      </blockquote>
+      <p>Complexity:</p>
+      <blockquote>
+        <ul style="margin: 10px;padding: 0px;">
+          <li>expected worst-case time complexity is O(N);</li>
+          <li>expected worst-case space complexity is O(1), beyond input storage (not counting the storage required for input
+            arguments).
+          </li>
+        </ul>
+      </blockquote>
+      <p>Elements of input arrays can be modified.</p>
+    </div>
+    <div style="margin-top:5px">
+      <small>Copyright 2009–2017 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.</small>
+    </div>
+
+  </div>
+</body>
+
+</html>
